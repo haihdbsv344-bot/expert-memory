@@ -12,7 +12,7 @@
     "api",
     "dashboard"
   ],
-  "author": "Antigravity AI & Dwong1410 System",
+  "author": "HOANGDZ",
   "license": "ISC",
   "dependencies": {
     "ws": "^8.18.0",
