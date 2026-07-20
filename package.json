@@ -2,10 +2,10 @@
   "name": "68gb-bot-api",
   "version": "1.0.0",
   "description": "Unified API and Dashboard for 68GB Bot - Premium AI",
-  "main": "server.js",
+  "main": "68.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node 68.js",
+    "dev": "node --watch 68.js"
   },
   "keywords": [
     "bot",
@@ -15,7 +15,10 @@
   "author": "Antigravity AI & Dwong1410 System",
   "license": "ISC",
   "dependencies": {
-    "ws": "^8.18.0"
+    "ws": "^8.18.0",
+    "puppeteer": "^22.12.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "engines": {
     "node": ">=18.0.0"
