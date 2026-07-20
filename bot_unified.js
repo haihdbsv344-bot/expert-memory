@@ -16,13 +16,18 @@ async function getWSS(landing) {
         console.log(`🌐 [WSS-FETCH] Launching browser to find WSS...`);
         browser = await puppeteer.launch({
             headless: "new",
+            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || null, // FIX: Tự động nhận diện đường dẫn Chrome trên môi trường Linux của Render
             args: [
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage",
                 "--disable-extensions",
                 "--disable-web-security",
-                "--disable-features=IsolateOrigins,site-per-process"
+                "--disable-features=IsolateOrigins,site-per-process",
+                "--disable-gpu", // FIX: Tối ưu, vô hiệu hóa phần cứng để tiết kiệm RAM trên VPS Render
+                "--no-first-run",
+                "--no-zygote",
+                "--single-process" // FIX: Chạy đơn tiến trình để tránh sinh nhiều tiến trình con gây tràn bộ nhớ gói Free
             ]
         });
 
