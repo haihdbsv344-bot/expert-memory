@@ -1,0 +1,23 @@
+{
+  "name": "68gb-bot-api",
+  "version": "1.0.0",
+  "description": "Unified API and Dashboard for 68GB Bot - Premium AI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "bot",
+    "api",
+    "dashboard"
+  ],
+  "author": "Antigravity AI & Dwong1410 System",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
